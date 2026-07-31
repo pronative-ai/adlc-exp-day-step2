@@ -2,7 +2,7 @@
 
 <!-- Business layer + Known Constraints — carried through exactly as given, not written by you -->
 
-**Title:** Real-Time Currency Conversion & Audit Trail
+**Title:** Real-Time Currency Conversion & Audit Trail.
 
 **Business Idea:** Treasury operations teams at our enterprise customers
 currently convert currency using manual lookups against a third-party
