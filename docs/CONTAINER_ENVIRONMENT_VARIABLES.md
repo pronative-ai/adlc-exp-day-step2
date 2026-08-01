@@ -21,3 +21,4 @@ Environment variables injected into Azure Container App containers, sourced from
 | `COSMOS_DB_RESOURCE_GROUP` | Azure resource group containing the Cosmos DB account. | `${COSMOS_DB_RESOURCE_GROUP}` |
 | `COSMOS_DB_REGION` | Azure region where Cosmos DB is deployed. `Central India` as default value. | `"Central India"` |
 | `AZURE_MANAGED_IDENTITY_CLIENT_ID` | Client ID of the user-assigned managed identity used to authenticate with Cosmos DB. | `${AZURE_MANAGED_IDENTITY_CLIENT_ID}` |
+| `CURRENCY_API_BASE_URL` | Base URL used by the backend for third-party exchange-rate lookups. | `"https://frankfurter.dev"` |

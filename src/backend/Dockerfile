@@ -1,11 +1,14 @@
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /src
 
-COPY OuterloopLabApi/OuterloopLabApi.csproj OuterloopLabApi/
-RUN dotnet restore OuterloopLabApi/OuterloopLabApi.csproj
+COPY OuterloopLabApi.sln ./
+COPY OuterloopLabApi.csproj ./
+COPY Tests/OuterloopLabApi.Tests.csproj Tests/
+RUN dotnet restore OuterloopLabApi.sln
 
-COPY OuterloopLabApi/ OuterloopLabApi/
-RUN dotnet publish OuterloopLabApi/OuterloopLabApi.csproj -c Release -o /app/publish
+COPY . .
+RUN dotnet build OuterloopLabApi.sln -c Release --no-restore
+RUN dotnet publish OuterloopLabApi.csproj -c Release -o /app/publish --no-build /p:UseAppHost=false
 
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS runtime
 WORKDIR /app
