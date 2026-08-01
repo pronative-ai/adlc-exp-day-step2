@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real-Time Currency Conversion & Audit Trail</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!--
+      Runtime placeholder replacement contract:
+      entrypoint script replaces __VITE_API_URL__ with the container runtime env var VITE_API_URL.
+    -->
+    <script>
+      window.__VITE_API_URL__ = "__VITE_API_URL__";
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
